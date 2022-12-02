@@ -55,11 +55,9 @@
 # Second, print the var. 
 # Third, print the std.
 
-
 import numpy
-
-a = map(int, raw_input().split())
-b = numpy.array([raw_input().split() for i in range(a[0])], int)
-print numpy.mean(b, axis = 1)
-print numpy.var(b, axis = 0)
-print numpy.std(b, axis = None)
+N,M = map(int, input().split(" "))
+A = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.mean(A, axis = 1))
+print(numpy.var(A, axis = 0))
+print(round(numpy.std(A, axis = None),11))
